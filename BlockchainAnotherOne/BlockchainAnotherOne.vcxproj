@@ -18,6 +18,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="driver.c" />
+    <ClCompile Include="hash.c" />
+    <ClCompile Include="user.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="hash.h" />
+    <ClInclude Include="user.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -122,15 +131,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\-Assignment-2-Blockchain\driver.c" />
-    <ClCompile Include="..\..\-Assignment-2-Blockchain\hash.c" />
-    <ClCompile Include="..\..\-Assignment-2-Blockchain\user.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\-Assignment-2-Blockchain\hash.h" />
-    <ClInclude Include="..\..\-Assignment-2-Blockchain\user.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
