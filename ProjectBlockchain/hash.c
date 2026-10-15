@@ -27,7 +27,7 @@ unsigned char* SSHA(const unsigned char* msg, size_t length) {
     digest[1] = B;
     digest[2] = C;
     digest[3] = D;
-    digest[4] = D;
+	digest[4] = E; // Logical error: the digest should be 5 bytes, but the loop only computes 4 bytes
     return digest;
 }
 
