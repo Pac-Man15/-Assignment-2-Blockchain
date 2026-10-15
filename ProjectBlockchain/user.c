@@ -78,9 +78,9 @@ void verify(struct User* curr) {
 
     printf("******** Verifying Log *********\n\n");
 
-    struct Block* prev = NULL;
+	struct User* prev = NULL; // prev is the previous node, curr is the current node needs to be User
     if (curr != NULL) {
-        prev = curr->next; // Logical error: using the wrong pointer
+        prev = curr->next; 
     }
 
     printf("User 1, impossible to verify\n");
