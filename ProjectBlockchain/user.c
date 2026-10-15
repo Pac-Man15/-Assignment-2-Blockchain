@@ -8,7 +8,10 @@ struct User* add(struct User * head, char* Username) {
 	Sleep((rand() % 10 + 1) * 1000);
 
 	struct User* newHead = (struct User*)malloc(sizeof(struct User));
-	strcpy(newHead->Username, Username);
+
+	strncpy(newHead->Username, Username, sizeof(newHead->Username) - 1); // makes sure to not overflow the buffer
+	newHead->Username[sizeof(newHead->Username) - 1] = '\0'; // Ensure null-termination
+
 	time(&(newHead->loginTime));
 	newHead->localLoginTime = *localtime(&(newHead->loginTime));
     newHead->next = head;
